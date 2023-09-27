@@ -7,6 +7,11 @@ class AlunoController {
         const row = await AlunoRepository.findAll();
         res.json(row);
     }
+    
+    async indexByMedia(req, res){
+        const row = await AlunoRepository.orderTheBest();
+        res.json(row);
+    }
 
     async show(req, res) {  
         const id = req.params.id;
@@ -26,6 +31,7 @@ class AlunoController {
         const row = await AlunoRepository.delete(req.params.id);
         res.status(201).json(row);
     }
+
 }
 
 //padrão singleton

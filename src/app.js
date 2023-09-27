@@ -19,9 +19,7 @@ app.put('/alunos/:id', AlunoController.update)
 app.delete('/alunos/:id', AlunoController.delete);
 
 //Rota para mostrar os alunos com as melhores medias
-app.get('/melhores_alunos', (req,res) =>{
-    res.send(melhoresMedia());
-})
+app.get('/melhores_alunos', AlunoController.indexByMedia);
 
 export default app;
 
