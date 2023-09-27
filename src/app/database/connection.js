@@ -22,7 +22,7 @@ export function consultaQuery (sql, valores='', msgErro){
         .query(sql, valores, (err, result, fields) =>{
             //const row = JSON.parse(JSON.stringify(result));
             if(err) reject(msgErro);
-            else return resolve(result);
+            else return resolve(JSON.parse(JSON.stringify(result)));
     })
     });     
 }

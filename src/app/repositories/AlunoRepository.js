@@ -1,4 +1,4 @@
-import conexao, { consultaQuery } from "../database/connection.js";
+import { consultaQuery } from "../database/connection.js";
 class AlunoRepository {
 
 

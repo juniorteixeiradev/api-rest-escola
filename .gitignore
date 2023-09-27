@@ -1,0 +1,4 @@
+node_modules/
+
+src/functions_old_mock.js
+src/app_mock_nodb.js
