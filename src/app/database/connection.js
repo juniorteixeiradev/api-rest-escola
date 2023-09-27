@@ -9,7 +9,13 @@ const conexao = mysql.createConnection({
 });
 
 conexao.connect();
-
+/**
+ * 
+ * @param {string} sql instrução sql a ser executada
+ * @param {[valores, id]} valores um array que tem valores que serão passados por requisição na consulta, e um id pra filtrar
+ * @param {string} msgErro erro pra ser exibido se a consulta nao tiver sucesso
+ * @returns 
+ */
 export function consultaQuery (sql, valores='', msgErro){
     return new Promise((resolve, reject) =>{
         conexao
